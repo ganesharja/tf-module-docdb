@@ -3,7 +3,8 @@ data "terraform_remote_state" "docdb" {
   backend = "s3"
   config = {
     bucket = "b55-terraform-state-ganesh"
-    key    = "docdb/dev/terraform.tfstate" 
-    region = "us-east-1
+    key    = "databases/dev/terraform.tfstate" 
+    region = "us-east-1"
   }
 }
+
