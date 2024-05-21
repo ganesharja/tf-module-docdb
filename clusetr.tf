@@ -16,3 +16,4 @@ resource "aws_docdb_subnet_group" "docdb" {
   tags = {
     Name = "roboshop-${var.ENV}-docdb-subnet-group"
   }
+}
