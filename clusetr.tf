@@ -6,7 +6,7 @@ resource "aws_docdb_cluster" "docdb" {
   master_password         = "roboshop1"
   preferred_backup_window = "07:00-09:00"
   skip_final_snapshot     = true                          # Value will be false in production. In lab, we will be using true
-
+}
 
 # Creates DocDB Subnet Group
 resource "aws_docdb_subnet_group" "docdb" {
@@ -16,4 +16,3 @@ resource "aws_docdb_subnet_group" "docdb" {
   tags = {
     Name = "roboshop-${var.ENV}-docdb-subnet-group"
   }
-}
